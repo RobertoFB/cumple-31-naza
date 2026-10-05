@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Felices 31!</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #fdfbfb; 
+            color: #333; 
+            text-align: center; 
+            margin: 0; 
+            padding: 0; 
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header { 
+            background: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%); 
+            padding: 80px 20px 40px; 
+            color: white; 
+            border-bottom-left-radius: 30px; 
+            border-bottom-right-radius: 30px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        h1 { 
+            font-family: 'Pacifico', cursive; 
+            font-size: 3.5em; 
+            margin: 0; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        p.subtitle { 
+            font-size: 1.2em; 
+            max-width: 600px; 
+            margin: 20px auto 0; 
+            line-height: 1.6; 
+        }
+        .scroll-hint {
+            margin-top: 20px; 
+            font-size: 2.2em; 
+            display: inline-block;
+            animation: bounce 2s infinite ease-in-out;
+            cursor: pointer;
+        }
+        .timeline {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+        .photo-card { 
+            background: white; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
+            overflow: hidden; 
+            width: 100%;
+            margin-bottom: 40px; 
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .photo-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .photo-card img { 
+            width: 100%; 
+            height: auto;
+            display: block;
+            border-bottom: 3px solid #fccb90;
+            background-color: #f7f7f7;
+        }
+        .caption { 
+            padding: 20px; 
+            font-size: 1.1em;
+            font-weight: 600; 
+            color: #2c3e50; 
+            line-height: 1.4;
+        }
+        .highlight {
+            color: #d57eeb;
+        }
+        .footer { 
+            padding: 50px 20px; 
+            background-color: #2c3e50; 
+            color: white; 
+            font-size: 1.2em;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+        .heart {
+            color: #e74c3c;
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.3); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.3); }
+            70% { transform: scale(1); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-12px);
+            }
+            60% {
+                transform: translateY(-6px);
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.8em;
+            }
+            .header {
+                padding: 60px 16px 30px;
+            }
+            p.subtitle {
+                font-size: 1.05em;
+            }
+            .caption {
+                padding: 16px;
+                font-size: 1.02em;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>¡Felices 31!</h1>
+        <p class="subtitle">La vida a tu lado es una colección de momentos hermosos. Sigue bajando para ver algunos de mis favoritos...</p>
+        <div class="scroll-hint">👇</div>
+    </div>
+
+    <div class="timeline">
+        <!-- Primera tanda (10) -->
+        <div class="photo-card">
+            <img src="4aeb3e5c-0cf5-412b-a9ef-8517702e6c16.jpg" alt="Piscina" decoding="async">
+            <div class="caption">Cada momento contigo... <span class="highlight">es especial</span></div>
+        </div>
+        <div class="photo-card">
+            <img src="12fe4e3e-8409-44c6-a9c4-de3e7af3dc63.jpg" alt="Playa" decoding="async">
+            <div class="caption">...es el inicio de <span class="highlight">una nueva aventura.</span></div>
+        </div>
+        <div class="photo-card">
+            <img src="20241226_201510.jpg" alt="Avión" loading="lazy" decoding="async">
+            <div class="caption">Volando alto juntos, siempre. ✈️</div>
+        </div>
+        <div class="photo-card">
+            <img src="20250101_120703.jpg" alt="Montaña" loading="lazy" decoding="async">
+            <div class="caption">Admirando tu belleza en cada paisaje. 🏔️</div>
+        </div>
+        <div class="photo-card">
+            <img src="20250315_211439.jpg" alt="Bebidas" loading="lazy" decoding="async">
+            <div class="caption">Celebrando la vida a tu lado 🥂</div>
+        </div>
+        <div class="photo-card">
+            <img src="20250406_121313.jpg" alt="Playa rocosa" loading="lazy" decoding="async">
+            <div class="caption">Mi persona favorita en todo el mundo. 🌊</div>
+        </div>
+        <div class="photo-card">
+            <img src="20250406_174335.jpg" alt="Comiendo" loading="lazy" decoding="async">
+            <div class="caption">Disfrutando de las pequeñas cosas (y la buena comida). 🤤</div>
+        </div>
+        <div class="photo-card">
+            <img src="20250418_134847(0).jpg" alt="Jardín" loading="lazy" decoding="async">
+            <div class="caption">Haces que todo a tu alrededor florezca. 🌸</div>
+        </div>
+        <div class="photo-card">
+            <img src="20250718_185835.jpg" alt="Gato 1" loading="lazy" decoding="async">
+            <div class="caption">Nuestra pequeña familia... 🐾</div>
+        </div>
+        <div class="photo-card">
+            <img src="20250718_185910.jpg" alt="Gato 2" loading="lazy" decoding="async">
+            <div class="caption">...llena de amor (y pelitos) <span class="heart">❤️</span></div>
+        </div>
+
+        <!-- Segunda tanda (10) -->
+        <div class="photo-card">
+            <img src="20251117_160320(0).jpg" alt="Selfie luz" loading="lazy" decoding="async">
+            <div class="caption">Esa sonrisa que ilumina todos mis días ✨</div>
+        </div>
+        <div class="photo-card">
+            <img src="B612_20240815_123245_407.jpg" alt="Selfie juntos" loading="lazy" decoding="async">
+            <div class="caption">Mi lugar favorito en el mundo es <span class="highlight">cerquita de ti.</span></div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG_0194.jpg" alt="Puerta de Alcalá" loading="lazy" decoding="async">
+            <div class="caption">Conquistando el mundo juntos 🌍</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG_0215.jpg" alt="Árbol florecido" loading="lazy" decoding="async">
+            <div class="caption">Capturando momentos, aunque tú eres mi mejor paisaje 🌸</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG_0434.jpg" alt="Castillo" loading="lazy" decoding="async">
+            <div class="caption">Mi reina en su castillo 👑</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG_0857.jpg" alt="Ruinas romanas" loading="lazy" decoding="async">
+            <div class="caption">Haciendo historia a tu lado 🏛️</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG_1491.jpg" alt="Museo" loading="lazy" decoding="async">
+            <div class="caption">Ni la obra de arte más famosa se compara contigo 🎨</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG_1527.jpg" alt="Torre Eiffel" loading="lazy" decoding="async">
+            <div class="caption">Trajimos nuestro propio amor a la ciudad del amor 🗼❤️</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG_2178.jpg" alt="Atardecer juntos" loading="lazy" decoding="async">
+            <div class="caption">Atardeceres perfectos si son entre tus brazos 🌅</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG_2253.jpg" alt="Atardecer ella" loading="lazy" decoding="async">
+            <div class="caption">Y que la vida nos siga regalando esta luz... 🌟</div>
+        </div>
+
+        <!-- Tercera tanda (10) -->
+        <div class="photo-card">
+            <img src="IMG_2272.jpg" alt="Playa atardecer" loading="lazy" decoding="async">
+            <div class="caption">La vida es mejor con arena, mar y tu compañía 🌊</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG_3050.jpg" alt="Evento elegante" loading="lazy" decoding="async">
+            <div class="caption">Brillando juntos en cada ocasión especial ✨</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG_3145.jpg" alt="Acostados juntos" loading="lazy" decoding="async">
+            <div class="caption">Mi paz y mi refugio siempre eres tú.</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG_3149.jpg" alt="Luz verde" loading="lazy" decoding="async">
+            <div class="caption">Tu alegría ilumina cualquier lugar 💚</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG_4973.jpg" alt="Ascensor" loading="lazy" decoding="async">
+            <div class="caption">Cada salida empieza y termina mejor contigo 🛗</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG_5068.jpg" alt="Playa soleada" loading="lazy" decoding="async">
+            <div class="caption">Días soleados que se quedan guardados en el alma ☀️</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG_6357.jpg" alt="Michi" loading="lazy" decoding="async">
+            <div class="caption">Amor del bueno (y más pelitos) 🐾</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG-20250824-WA0030.jpg" alt="Evento noche" loading="lazy" decoding="async">
+            <div class="caption">Disfrutando cada salida y cada locura 🎵</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG-20251114-WA0009.jpg" alt="Gorrito medico" loading="lazy" decoding="async">
+            <div class="caption">Admirando siempre tu dedicación y entrega 👩‍⚕️</div>
+        </div>
+        <div class="photo-card">
+            <img src="IMG-20251226-WA0023.jpg" alt="Banderines" loading="lazy" decoding="async">
+            <div class="caption">Celebrando la vida, hoy y siempre.</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Gracias por ser mi compañera de vida. ¡Felices 31, mi amor! 🎉</p>
+        <p style="font-size: 0.8em; margin-top: 10px;">Con todo mi amor, Roberto.</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                rootMargin: '0px 0px -40px 0px',
+                threshold: 0.1
+            });
+            
+            document.querySelectorAll('.photo-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
